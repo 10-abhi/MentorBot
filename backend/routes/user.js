@@ -5,7 +5,7 @@ const route = express.Router();
 
 //Defining Zod for Schema validation
 const myZodSchema = zod.object({
-    username: zod.string(),
+    userName : zod.string(),
     password: zod.string(),
     firstName: zod.string(),
     lastName: zod.string()
@@ -18,19 +18,19 @@ route.post("/signup", async (req, res) => {
     const { success } = myZodSchema.safeParse(body);
     if (!success) {
         return res.status(411).json({
-            message: "Input Error Occured , Inputs is Incorrect"
+            message: "Error : Inputs is Incorrect"
         })
     }
     const user = await User.findOne({
-        username: req.body.username
+        userName: req.body.userName
     })
     if (user) {
         return res.json({
-            message: "Username Already Exists"
+            message: "UserName Already Exists"
         })
     }
     const dbUser = await User.create({
-        username: body.username,
+        userName: body.userName,
         password: body.password,
         firstName: body.firstName,
         lastName: body.lastName,
@@ -47,7 +47,7 @@ route.post("/signup", async (req, res) => {
 });
 
 const signinZodSchema = zod.object({
-    email : zod.string(),
+    userName : zod.string(),
     password : zod.string()
    })
 
@@ -60,7 +60,7 @@ const signinZodSchema = zod.object({
       })
      }
      const user = await User.findOne({
-        username : req.body.username,
+        userName : req.body.userName,
         password : req.body.password
     });
      
@@ -70,7 +70,7 @@ const signinZodSchema = zod.object({
         })
      }
         return res.status(200).json({
-            message :" User Exists "
+            message :" User Exists , Navigating to Dashboard"
         })
         
      })

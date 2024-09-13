@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('dotenv').congif();
+require('dotenv').config();
 
 mongoose.connect(process.env.MONGODB_URI , {
     useNewUrlParser: true,
@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
        required : true ,
        maxLength : 30  
     },
-     email : {
+     userName : {
      type : String,
      lowercase :true,
      required : true ,
@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
     password: {
       type : String ,
       required : true ,
-      minLength : 6
+      minLength : 5
     },
    
 });
