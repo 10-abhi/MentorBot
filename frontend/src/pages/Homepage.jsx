@@ -32,23 +32,23 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Header */}
-      <header className="bg-white shadow-sm h-20">
+      <header className="bg-sky-950 shadow-sm h-20">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center">
-            <Bot className="h-8 w-8 text-blue-500 mr-2" />
-            <span className="text-xl font-semibold text-gray-800">MentorBot</span>
+            <Bot className="h-8 w-8 text-blue-200 mr-2" />
+            <span className="text-xl font-semibold text-gray-400">MentorBot</span>
           </div>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300">
+          <button className="bg-slate-900 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300">
             Login/Signup
           </button>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="flex-grow bg-slate-900">
         {/* Upper Section */}
-        <section className="relative overflow-hidden bg-gray-100 py-16">
-          <div className="absolute inset-0 bg-blue-100 transform -skew-y-6 origin-top-left"></div>
+        <section className="relative overflow-hidden bg-slate-800 py-16">
+          <div className="absolute inset-0 bg-slate-200 transform -skew-y-6 origin-top-left"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-3xl font-light text-gray-600 mb-2">Experts</h2>
@@ -64,7 +64,7 @@ const Homepage = () => {
               <img
                 src="../src/assets/bot.jpg"
                 alt="AI Mentor"
-                className="w-full  h-auto max-h-96 object-contain rounded-lg shadow-xl"
+                className="w-full h-auto max-h-96 object-contain rounded-lg shadow-xl"
               />
             </div>
           </div>

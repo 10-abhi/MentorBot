@@ -13,7 +13,7 @@ const LowerLandingSection = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gradient-to-br from-sky-800 via-gray-800 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -84,7 +84,7 @@ const LowerLandingSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-gray-300">
                 We bring solutions to make life easier for our customers.
               </h3>
               <p className="text-gray-600">
@@ -94,7 +94,7 @@ const LowerLandingSection = () => {
                 {['Aenean quam ornare', 'Curabitur blandit tempus', 'Quis nostrud exercitation', 'Quis nostrud exercitation'].map((item, index) => (
                   <li key={index} className="flex items-center space-x-2">
                     <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                    <span>{item}</span>
+                    <span className='text-slate-300'>{item}</span>
                   </li>
                 ))}
               </ul>
