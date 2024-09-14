@@ -21,17 +21,16 @@ export function Signup (){
         <Heading label={"Sign up"}></Heading>
         <SubHeading label={"Enter Your Information to create an account"}></SubHeading>
         <InputBox label={"First Name"} placeholder={"John"} onChange={e=>{setFirstName(e.target.value)}} ></InputBox>
-        <InputBox label={"Last Name"} placeholder={"Doe"} onChatenge={e=>{setLastName(e.target.value)}}></InputBox>
+        <InputBox label={"Last Name"} placeholder={"Doe"} onChange={e=>{setLastName(e.target.value)}}></InputBox>
         <InputBox label={"username"} placeholder={"xyz@gmail.com"} onChange={e=>{setUsername(e.target.value)}}></InputBox>
         <InputBox label={"password"} placeholder={"12345"} onChange={e=>{setPassword(e.target.value)}}></InputBox>
         <Button2 onClick={async ()=>{
-            const response = await axios.post("http://localhost:3000/api/v1/user/signup" , {
+            const response = await axios.post("https://mentorbot-backend.vercel.app/api/v1/user/signup" , {
                 userName,
                 password,
                 firstName,
                 lastName
             })
-            localStorage.setItem("token" , response.data.token);
             navigate("/dashboard")
         }} label={"Sign up"}></Button2>
         </div>-
