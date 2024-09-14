@@ -14,6 +14,7 @@ import {
 import MyCalendar from "../components/Calendar";
 import UserProfile from "../components/UserProfile";
 import Navbar from "../components/Navbar";
+import Navigation from "../components/Navigation";
 
 const apiData = [
   { time: "09:30 AM", calls: 30 },
@@ -56,16 +57,16 @@ export const Dashboard = () => {
   return (
     <>
       <Navbar />
+      <Navigation />  
     <div className="bg-purple-50 min-h-screen p-4">
       <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-6">
         <div className="flex flex-col lg:flex-row">
           {/* Sidebar */}
           <div className="lg:w-1/5 mb-6 lg:mb-0">
-            <div className="flex items-center mb-8">
-              {/* <div className="w-8 h-8 bg-indigo-600 rounded-lg mr-2"></div> */}
+            {/* <div className="flex items-center mb-8">
               <Bot className="w-8 h-8 text-indigo-600 mr-2" />
               <h1 className="text-2xl font-bold text-indigo-600">Mentora</h1>
-            </div>
+            </div> */}
 
             <div className="border ">
               <UserProfile />

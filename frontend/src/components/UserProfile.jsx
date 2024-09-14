@@ -33,8 +33,7 @@ const BackgroundContainer = styled('div')(({ theme }) => ({
 }));
 
 const ProfileCard = styled(Card)(({ theme }) => ({
-
-  width: '90%',
+  width: '100%',
   maxWidth: '400px',
   margin: 'auto',
 }));
