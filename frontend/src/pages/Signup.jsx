@@ -31,7 +31,6 @@ export function Signup (){
                 firstName,
                 lastName
             })
-            localStorage.setItem("token" , response.data.token);
             navigate("/dashboard")
         }} label={"Sign up"}></Button2>
         </div>-

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 export function Signin (){
-      const [username , setUsername] = useState("");
+      const [userName , setUsername] = useState("");
       const [password , setPassword] = useState("");
       const navigate = useNavigate();
   return  <div className="flex justify-center h-screen w-screen bg-gray-900">
@@ -20,11 +20,10 @@ export function Signin (){
      <InputBox label={"Password"} placeholder={"123456"} onChange={e=>{setPassword(e.target.value)}}></InputBox>
      <Button2 label={"Sign In"} onClick={async()=>{
         const response = await axios.post("http://localhost:3000/api/v1/user/signin", {
-           username,
+           userName,
            password
          })
          if(response.status == 200){
-          localStorage.setItem("token" , response.data.token);
           navigate("/dashboard");
          }
      }} ></Button2></div>
