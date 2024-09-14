@@ -4,6 +4,7 @@ import { Bot, Trash2, MapPin, ArrowRight, Container } from 'lucide-react';
 import Footer from './Footer';
 import LowerLandingSection from './Lowerpage';
 import { useNavigate } from "react-router-dom";
+
 const Homepage = () => {
   const lowerSectionRef = useRef(null);
   const navigate = useNavigate();
