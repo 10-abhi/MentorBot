@@ -21,7 +21,7 @@ export function Signup (){
         <Heading label={"Sign up"}></Heading>
         <SubHeading label={"Enter Your Information to create an account"}></SubHeading>
         <InputBox label={"First Name"} placeholder={"John"} onChange={e=>{setFirstName(e.target.value)}} ></InputBox>
-        <InputBox label={"Last Name"} placeholder={"Doe"} onChatenge={e=>{setLastName(e.target.value)}}></InputBox>
+        <InputBox label={"Last Name"} placeholder={"Doe"} onChange={e=>{setLastName(e.target.value)}}></InputBox>
         <InputBox label={"username"} placeholder={"xyz@gmail.com"} onChange={e=>{setUsername(e.target.value)}}></InputBox>
         <InputBox label={"password"} placeholder={"12345"} onChange={e=>{setPassword(e.target.value)}}></InputBox>
         <Button2 onClick={async ()=>{
