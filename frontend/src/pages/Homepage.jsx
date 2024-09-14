@@ -3,9 +3,15 @@ import { motion } from 'framer-motion';
 import { Bot, Trash2, MapPin, ArrowRight, Container } from 'lucide-react';
 import Footer from './Footer';
 import LowerLandingSection from './Lowerpage';
-
+import { useNavigate } from "react-router-dom";
 const Homepage = () => {
   const lowerSectionRef = useRef(null);
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate('/signup');
+  }
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,7 +44,7 @@ const Homepage = () => {
             <Bot className="h-8 w-8 text-blue-200 mr-2" />
             <span className="text-xl font-semibold text-gray-400">MentorBot</span>
           </div>
-          <button className="bg-slate-900 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300">
+          <button onClick={handleClick} className="bg-slate-900 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300">
             Login/Signup
           </button>
         </div>
