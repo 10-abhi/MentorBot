@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import { Homepage } from './pages/Homepage'
+import Homepage from './pages/Homepage'
+import LowerLandingSection from './pages/Lowerpage'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-   <Homepage></Homepage>
+    <Homepage></Homepage>
     </>
   )
 }
