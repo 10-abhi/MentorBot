@@ -68,13 +68,11 @@ const LowerLandingSection = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/api/placeholder/600/500"
+                src="../src/assets/final_soln.png"
                 alt="Solutions illustration"
                 className="rounded-lg shadow-xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-yellow-400 rounded-full p-4 shadow-lg">
-                <img src="/api/placeholder/80/80" alt="Decorative element" className="w-16 h-16 rounded-full" />
-              </div>
+            
             </motion.div>
 
             <motion.div

@@ -68,11 +68,8 @@ const Homepage = () => {
               </button>
             </div>
             <div id='image' className="mt-12 max-w-2xl mx-auto">
-              <img
-                src="../src/assets/bot.jpg"
-                alt="AI Mentor"
-                className="w-full h-auto max-h-96 object-contain rounded-lg shadow-xl"
-              />
+              <div className="w-full h-24 max-h-96 object-contain rounded-lg shadow-xl"
+              ></div>
             </div>
           </div>
         </section>
