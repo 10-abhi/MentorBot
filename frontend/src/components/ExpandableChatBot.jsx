@@ -63,7 +63,11 @@ export default function ExpandableChatBot() {
               className="flex-grow border rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button
-              onClick={handleSendMessage}
+              onClick={async ()=>{
+                const response = await axios.post("https://ro-paybackend.vercel.app/api/v1/user/data" , {
+                    //SetMessage which you want to show 
+              })
+              }}
               className="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600 transition-colors duration-200"
             >
               <Send size={20} />
