@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI , {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect('mongodb+srv://mentorbot:mentorbot1234@cluster0.g39ao.mongodb.net/mentorbot' , {
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true
 })
 
 const userSchema = new mongoose.Schema({

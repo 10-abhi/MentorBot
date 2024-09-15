@@ -1,6 +1,8 @@
 import React from "react";
 import UserProfile from "../components/UserProfile";
 import Navigation from "../components/Navigation";
+import ExpandableChatBot from "../components/ExpandableChatBot";
+
 
 const options = {
   weekday: "long",
@@ -13,7 +15,9 @@ const data = new Date();
 export const Resources = () => {
   return (
     <>
+      <Navbar />
       <Navigation />  
+      <ExpandableChatBot />
     <div className="bg-purple-50 min-h-screen p-4">
       <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-6">
         <div className="flex flex-col lg:flex-row">
