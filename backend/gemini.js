@@ -103,3 +103,5 @@ function promptUser() {
 
 // Start the user prompt loop
 promptUser();
+
+export default promptUser;
