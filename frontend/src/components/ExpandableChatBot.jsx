@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { MessageSquare, X, Send } from 'lucide-react'
+import { MessageSquare, X, Send, CloudCog } from 'lucide-react'
+// import { set } from 'mongoose'
 
 export default function ExpandableChatBot() {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -7,6 +8,7 @@ export default function ExpandableChatBot() {
     { text: "Hello! How can I assist you today?", isBot: true },
   ])
   const [inputMessage, setInputMessage] = useState("")
+  const [data, setData] = useState("")
 
   const toggleExpand = () => setIsExpanded(!isExpanded)
 
@@ -14,14 +16,38 @@ export default function ExpandableChatBot() {
     setInputMessage(e.target.value)
   }
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (inputMessage.trim()) {
       setMessages([...messages, { text: inputMessage, isBot: false }])
       setInputMessage("")
-      // Simulate bot response
-      setTimeout(() => {
-        setMessages(prevMessages => [...prevMessages, { text: "I'm processing your request. How else can I help you?", isBot: true }])
+      // const response = await axios.post("http://localhost:3000/api/v1/user/data" , {
+      //   //       //SetMessage which you want to show 
+      // })
+      try {
+        const response = await fetch('http://localhost:3000/api/v1/user/data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: inputMessage }),
+        });
+        console.log(response)
+        const aiRes = await response.json();
+        aiRes += "Keep the response under 100 characters"
+        console.log(aiRes)
+        setData(aiRes.message)
+        setTimeout(() => {
+        setMessages(prevMessages => [...prevMessages, { text: aiRes.message, isBot: true }])
       }, 1000)
+        console.log("data",data)
+        // addMessage(data.response, 'bot');
+      } catch (error) {
+        console.log(error);
+        // addMessage('Error: Unable to reach the server.', 'bot');
+      }
+      // console.log(response)
+      // Simulate bot response
+      // setTimeout(() => {
+      //   setMessages(prevMessages => [...prevMessages, { text: data, isBot: true }])
+      // }, 1000)
     }
   }
 
@@ -35,7 +61,7 @@ export default function ExpandableChatBot() {
           <MessageSquare size={24} />
         </button>
       ) : (
-        <div className="bg-white rounded-lg shadow-xl w-80 max-h-96 flex flex-col">
+        <div className="bg-white rounded-lg shadow-xl w-[47vh] max-h-[80vh] flex flex-col">
           <div className="bg-blue-500 text-white p-4 rounded-t-lg flex justify-between items-center">
             <h3 className="font-bold">Chat Bot</h3>
             <button onClick={toggleExpand} className="text-white hover:text-gray-200">
@@ -63,11 +89,13 @@ export default function ExpandableChatBot() {
               className="flex-grow border rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button
-              onClick={async ()=>{
-                const response = await axios.post("https://ro-paybackend.vercel.app/api/v1/user/data" , {
-                    //SetMessage which you want to show 
-              })
-              }}
+              // onClick={async ()=>{
+              //   const response = await axios.post("http://localhost:3000/api/v1/user/data" , {
+              //       //SetMessage which you want to show 
+              //     })
+              //     setInputMessage(response.data.message)
+              // }}
+              onClick={handleSendMessage}
               className="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600 transition-colors duration-200"
             >
               <Send size={20} />

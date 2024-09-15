@@ -163,12 +163,15 @@ const signinZodSchema = zod.object({
         // const aiRes = await promptUser();
         // console.log(aiRes);
 
+        const reqData = [];
+
         while (req.body.end !== true) {
             // const prompt = req.body.message;
             const prompt = req.body.message;
             console.log(prompt);
-            const data = await generateContent(prompt);
-            console.log(data);
+            const data = await generateContent(reqData.length > 0 ? reqData.toString() : prompt);
+            reqData.push("This is my previous data: " + prompt);    
+            console.log(reqData);
             // return data;
 
             return res.json({ message: data });
