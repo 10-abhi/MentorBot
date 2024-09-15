@@ -1,12 +1,12 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Homepage from "../src/pages/Homepage"
-import { Signin } from "./pages/Signin"
-import { Signup } from './pages/Signup'
-import { Dashboard } from './pages/Dashboard'
-import { CareerPath } from './pages/CareerPath'
-import { Resources } from './pages/Resources'
-import { Progress } from './pages/Progress'
+import { Signin } from "../src/pages/Signin"
+import { Signup } from "../src/pages/Signup"
+import { Dashboard } from "../src/pages/Dashboard"
+import { CareerPath } from "../src/pages/CareerPath"
+import { Resources } from "../src/pages/Resources"
+import { Progress } from "../src/pages/Progress"
 import { Notifications } from './pages/Notifications'
 
 function App() {

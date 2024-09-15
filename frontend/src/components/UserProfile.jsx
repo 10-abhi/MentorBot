@@ -9,6 +9,7 @@ import {
   createTheme 
 } from '@mui/material';
 import { styled } from '@mui/system';
+import { inView } from 'framer-motion';
 
 // Create a custom theme
 const theme = createTheme({
@@ -56,6 +57,7 @@ const LargeAvatar = styled(Avatar)(({ theme }) => ({
 }));
 
 export default function UserProfile() {
+  const username = localStorage.getItem('userName');
   return (
     <ThemeProvider theme={theme}>
       {/* <BackgroundContainer> */}
@@ -68,9 +70,7 @@ export default function UserProfile() {
               />
             }
             title={
-              <Typography variant="h5" component="h2" >
-                User Name
-              </Typography>
+             <div className="text-2xl">{username}</div>
             }
           />
           <CardContent>
