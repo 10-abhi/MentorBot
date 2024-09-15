@@ -56,64 +56,66 @@ const data = new Date();
 export const Dashboard = () => {
   return (
     <>
-      <Navbar />
-      <Navigation />  
-    <div className="bg-purple-50 min-h-screen p-4">
-      <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-6">
-        <div className="flex flex-col lg:flex-row">
-          {/* Sidebar */}
-          <div className="lg:w-1/5 mb-6 lg:mb-0">
-            {/* <div className="flex items-center mb-8">
+      {/* <Navbar /> */}
+      <Navigation />
+      <div className="bg-slate-200 min-h-screen p-4">
+        <div className="max-w-7xl mx-auto bg-slate-100 rounded-lg shadow-lg p-6">
+          <div className="flex flex-col lg:flex-row">
+            {/* Sidebar */}
+            <div className="lg:w-1/5 mb-6 lg:mb-0">
+              {/* <div className="flex items-center mb-8">
               <Bot className="w-8 h-8 text-indigo-600 mr-2" />
               <h1 className="text-2xl font-bold text-indigo-600">Mentora</h1>
             </div> */}
 
-            <div className="border ">
-              <UserProfile />
-            </div>
-          </div>
-
-          {/* Main Content */}
-          <div className="lg:w-4/5 lg:pl-8">
-            <header className="flex justify-between items-center mb-6">
-              <div>
-                <h2 className="text-2xl font-bold">Dashboard</h2>
-                <p className="text-gray-500">
-                  Information about your current plan and usages
-                </p>
+              <div className="border ">
+                <UserProfile />
               </div>
-              <div className="flex items-center border p-2 rounded-xl">
-                <span className="mr-2">
-                  {data.toLocaleDateString("en-GB", options)}
-                </span>
-                {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            </div>
+
+            {/* Main Content */}
+            <div className="lg:w-4/5 lg:pl-8">
+              <header className="flex justify-between items-center mb-6">
+                <div>
+                  <h2 className="text-2xl font-bold">Dashboard</h2>
+                  <p className="text-gray-500">
+                    Information about your current plan and usages
+                  </p>
+                </div>
+                <div className="flex items-center border p-2 rounded-xl">
+                  <span className="mr-2">
+                    {data.toLocaleDateString("en-GB", options)}
+                  </span>
+                  {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg> */}
-              </div>
-            </header>
+                </div>
+              </header>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="bg-orange-100 p-4 rounded-lg">
-                <h3 className="font-semibold text-orange-700">Projects</h3>
-                <p className="text-2xl font-bold">3</p>
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div className="bg-orange-100 p-4 rounded-lg">
+                  <h3 className="font-semibold text-orange-700">Projects</h3>
+                  <p className="text-2xl font-bold">3</p>
+                </div>
+                <div className="bg-purple-100 p-4 rounded-lg">
+                  <h3 className="font-semibold text-purple-700">
+                    Resume Score
+                  </h3>
+                  <p className="text-2xl font-bold">76</p>
+                </div>
+                <div className="bg-blue-100 p-4 rounded-lg">
+                  <h3 className="font-semibold text-blue-700">Users</h3>
+                  <p className="text-2xl font-bold">3</p>
+                </div>
+                <div className="bg-red-100 p-4 rounded-lg">
+                  <h3 className="font-semibold text-red-700">Progress</h3>
+                  <p className="text-2xl font-bold">28/100 %</p>
+                </div>
               </div>
-              <div className="bg-purple-100 p-4 rounded-lg">
-                <h3 className="font-semibold text-purple-700">Resume Score</h3>
-                <p className="text-2xl font-bold">76</p>
-              </div>
-              <div className="bg-blue-100 p-4 rounded-lg">
-                <h3 className="font-semibold text-blue-700">Users</h3>
-                <p className="text-2xl font-bold">3</p>
-              </div>
-              <div className="bg-red-100 p-4 rounded-lg">
-                <h3 className="font-semibold text-red-700">Progress</h3>
-                <p className="text-2xl font-bold">28/100 %</p>
-              </div>
-            </div>
 
-            {/* API Calls Chart */}
-            {/* <div className="bg-white p-4 rounded-lg shadow mb-8">
+              {/* API Calls Chart */}
+              {/* <div className="bg-white p-4 rounded-lg shadow mb-8">
               <h3 className="text-lg font-semibold mb-4">API Calls in last 6 hours</h3>
               <ResponsiveContainer width="100%" height={200}>
                 <LineChart data={apiData}>
@@ -122,54 +124,54 @@ export const Dashboard = () => {
                   <Line type="monotone" dataKey="calls" stroke="#8884d8" />
                 </LineChart>
               </ResponsiveContainer>
-            </div> */}
+              </div> */}
 
-            {/* P&L and Current Plan */}
+              {/* P&L and Current Plan */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-4 rounded-lg shadow">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-lg font-semibold mb-4">Top Skills</h3>
-                  {/* <span className="text-sm text-gray-500">Total profit growth of 25%</span> */}
-                  {/* <MoreHorizontal size={20} className="text-gray-400" /> */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white p-4 rounded-lg shadow">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-lg font-semibold mb-4">Top Skills</h3>
+                    {/* <span className="text-sm text-gray-500">Total profit growth of 25%</span> */}
+                    {/* <MoreHorizontal size={20} className="text-gray-400" /> */}
+                  </div>
+                  <ResponsiveContainer width="100%" height={190}>
+                    <PieChart>
+                      <Pie
+                        data={pieData}
+                        dataKey="value"
+                        nameKey="name"
+                        cx="50%"
+                        cy="50%"
+                        outerRadius={80}
+                        fill="#8884d8"
+                      >
+                        {pieData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.color} />
+                        ))}
+                      </Pie>
+                    </PieChart>
+                  </ResponsiveContainer>
+                  <div className="grid grid-cols-4 gap-4 mt-4">
+                    {pnlData.map((item, index) => (
+                      <div key={index} className="flex items-center">
+                        <div
+                          className={`w-3 h-3 rounded-full mr-2`}
+                          style={{ backgroundColor: item.color }}
+                        ></div>
+                        <span className="text-sm">{item.name}</span>
+                        {/* <span className="ml-auto font-semibold">{item.value}%</span> */}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <ResponsiveContainer width="100%" height={190}>
-                  <PieChart>
-                    <Pie
-                      data={pieData}
-                      dataKey="value"
-                      nameKey="name"
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={80}
-                      fill="#8884d8"
-                    >
-                      {pieData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                  </PieChart>
-                </ResponsiveContainer>
-                <div className="grid grid-cols-4 gap-4 mt-4">
-                  {pnlData.map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <div
-                        className={`w-3 h-3 rounded-full mr-2`}
-                        style={{ backgroundColor: item.color }}
-                      ></div>
-                      <span className="text-sm">{item.name}</span>
-                      {/* <span className="ml-auto font-semibold">{item.value}%</span> */}
-                    </div>
-                  ))}
-                </div>
-              </div>
 
-              <div className="bg-white p-6 rounded-lg shadow">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-lg font-semibold">Attended Courses</h3>
-                  <MoreHorizontal size={20} className="text-gray-400" />
-                </div>
-                {/* <div className="flex items-center justify-between mb-6">
+                <div className="bg-white p-6 rounded-lg shadow">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold">Attended Courses</h3>
+                    <MoreHorizontal size={20} className="text-gray-400" />
+                  </div>
+                  {/* <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
                   <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -179,31 +181,31 @@ export const Dashboard = () => {
                 <span className="font-semibold">Team Plan</span>
               </div>
               <span className="text-xl font-bold">$99<span className="text-sm text-gray-500">/mo</span></span>
-            </div> */}
-                <div className="space-y-4">
-                  {attendedCourses.map((item, index) => (
-                    <div key={index}>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span>{item.name}</span>
-                        <span>
-                          {item.value}/{item.maxValue}
-                        </span>
+              </div> */}
+                  <div className="space-y-4">
+                    {attendedCourses.map((item, index) => (
+                      <div key={index}>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>{item.name}</span>
+                          <span>
+                            {item.value}/{item.maxValue}
+                          </span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div
+                            className="h-2 rounded-full"
+                            style={{
+                              width: `${(item.value / item.maxValue) * 100}%`,
+                              backgroundColor: item.color,
+                            }}
+                          ></div>
+                        </div>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className="h-2 rounded-full"
-                          style={{
-                            width: `${(item.value / item.maxValue) * 100}%`,
-                            backgroundColor: item.color,
-                          }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* <div className="bg-white p-4 rounded-lg shadow">
+                {/* <div className="bg-white p-4 rounded-lg shadow">
                 <h3 className="text-lg font-semibold mb-4">Current Plan</h3>
                 <div className="flex justify-between items-center mb-4">
                   <span>Team Plan</span>
@@ -230,17 +232,24 @@ export const Dashboard = () => {
                   </div>
                 </div>
               </div> */}
+              </div>
+              <div className="">
+                <hr className="my-10 border-slate-400" />
+                <div className="border p-4 bg-white border-slate-300 rounded-xl shadow">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold">Calendar</h3>
+                    <MoreHorizontal size={20} className="text-gray-400" />
+                  </div>
+                  <div className=" w-fit my-4 mx-auto">
+                    <MyCalendar />
+                  </div>
+                </div>
+              </div>
             </div>
-            <hr className="my-10 border-slate-400" />
-            <div className="w-[60vw] my-6">
-              <MyCalendar />
-            </div>
-            
           </div>
         </div>
       </div>
-    </div>
-  </>
+    </>
   );
 };
 
