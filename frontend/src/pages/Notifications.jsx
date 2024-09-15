@@ -15,7 +15,6 @@ const data = new Date();
 export const Notifications = () => {
   return (
     <>
-      <Navbar />
       <Navigation />  
       <ExpandableChatBot />
     <div className="bg-purple-50 min-h-screen p-4">

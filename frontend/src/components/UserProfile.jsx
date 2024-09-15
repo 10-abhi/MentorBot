@@ -70,7 +70,7 @@ export default function UserProfile() {
               />
             }
             title={
-             <div className="text-2xl">{username}</div>
+             <div className="text-2xl">{"Rishi Sharma"}</div>
             }
           />
           <CardContent>

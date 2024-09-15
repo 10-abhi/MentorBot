@@ -57,7 +57,6 @@ const data = new Date();
 export const Dashboard = () => {
   return (
     <>
-      {/* <Navbar /> */}
       <Navigation />
       <ExpandableChatBot />
       <div className="bg-slate-200 min-h-screen p-4">
