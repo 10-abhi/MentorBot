@@ -63,7 +63,7 @@ const Homepage = () => {
               <p className="text-xl text-gray-600 mb-8">
                 Professional in giving guidance and roadmap for tech related fields sets based on the industry analysis
               </p>
-              <button className="bg-yellow-400 text-gray-800 px-8 py-3 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+              <button onClick={handleClick} className="bg-yellow-400 text-gray-800 px-8 py-3 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
                 Get Started
               </button>
             </div>

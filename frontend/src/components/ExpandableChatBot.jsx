@@ -30,7 +30,7 @@ export default function ExpandableChatBot() {
           body: JSON.stringify({ message: inputMessage }),
         });
         console.log(response)
-        const aiRes = await response.json();
+        let aiRes = await response.json();
         aiRes += "Keep the response under 100 characters"
         console.log(aiRes)
         setData(aiRes.message)

@@ -1,13 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Monitor, Shield, Cloud, Cpu, Settings, Server } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+
 
 const LowerLandingSection = () => {
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate('/signup');
+  }
   const services = [
     { icon: <Monitor className="w-8 h-8" />, title: 'Software & Integration' },
     { icon: <Shield className="w-8 h-8" />, title: 'Network Security' },
-    { icon: <Cloud className="w-8 h-8" />, title: 'Cloud Services' },
-    { icon: <Cpu className="w-8 h-8" />, title: 'Wireless Networking' },
+    { icon: <Cloud className="w-8 h-8" />, title: 'Career Path' },
+    { icon: <Cpu className="w-8 h-8" />, title: 'AI Mentor' },
     { icon: <Settings className="w-8 h-8" />, title: 'IT Solutions' },
     { icon: <Server className="w-8 h-8" />, title: 'Server Configuration' },
   ];
@@ -35,7 +41,7 @@ const LowerLandingSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {services.map((service, index) => (
-              <motion.div
+              <motion.div onClick={handleClick}
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 variants={{
