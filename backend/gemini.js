@@ -80,6 +80,14 @@ const rl = readline.createInterface({
 // Function to prompt the user for input and process it
 function promptUser() {
     rl.question("Enter your command (type 'end' to exit): ", async (input) => {
+        if (input.toLowerCase() === "end") {
+            console.log("Exiting...");
+            rl.close();
+            return;
+        }
+        else {
+            await generateContent(input);
+        }
         
         // Fetch job and skills
         const { job, skills } = fetchUserJobAndSkills();
@@ -89,14 +97,6 @@ function promptUser() {
         await generateContent(prompt);
         
         // Prompt the user again
-        if (input.toLowerCase() === "end") {
-            console.log("Exiting...");
-            rl.close();
-            return;
-        }
-        else {
-            await generateContent(input);
-        }
         promptUser();
     });
 }
