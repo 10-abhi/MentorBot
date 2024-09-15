@@ -1,6 +1,5 @@
 import React from "react";
 import UserProfile from "../components/UserProfile";
-import Navbar from "../components/Navbar";
 import Navigation from "../components/Navigation";
 import ExpandableChatBot from "../components/ExpandableChatBot";
 
@@ -16,7 +15,7 @@ const data = new Date();
 export const Resources = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Navigation />  
       <ExpandableChatBot />
     <div className="bg-purple-50 min-h-screen p-4">
