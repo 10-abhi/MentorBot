@@ -15,6 +15,8 @@ import MyCalendar from "../components/Calendar";
 import UserProfile from "../components/UserProfile";
 import Navbar from "../components/Navbar";
 import Navigation from "../components/Navigation";
+import ExpandableChatBot from "../components/ExpandableChatBot";
+
 
 const apiData = [
   { time: "09:30 AM", calls: 30 },
@@ -56,8 +58,9 @@ const data = new Date();
 export const CareerPath = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Navigation />  
+      <ExpandableChatBot />
     <div className="bg-purple-50 min-h-screen p-4">
       <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-6">
         <div className="flex flex-col lg:flex-row">
